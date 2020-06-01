@@ -1,8 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
+import MessageList from './Components/MessageList'
+import SendMessageForm from './Components/SendMessageForm'
+import RoomList from './Components/RoomList'
+import NewRoomForm from './Components/NewRoomForm'
 import './App.css';
 
-function App() {
+/*function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -23,4 +26,19 @@ function App() {
   );
 }
 
-export default App;
+export default App;*/
+
+class App extends React.Component {
+  render() {
+      return (
+          <div className="app">
+              <RoomList />
+              <MessageList />
+              <SendMessageForm />
+              <NewRoomForm />
+          </div>
+      );
+  }
+}
+
+export default App
