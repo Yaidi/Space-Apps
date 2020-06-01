@@ -1,0 +1,112 @@
+    .item1 {
+        grid-area: header;
+    }
+
+    .item3 {
+        grid-area: content;
+        text-align: center;
+
+    }
+
+    .item4 {
+        grid-area: footer;
+        justify-self: center;
+        margin-bottom: .3em;
+        font-size: .5em;
+    }
+
+    .container {
+        font-size: 1.5em;
+        min-height: 300px;
+        width: 100%;
+        height: 100vw;
+        width: auto;
+        background: rgb(243, 243, 243);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px auto 1fr auto;
+        grid-gap: 10px;
+        grid-template-areas:
+        "header"
+        "content"
+        "content"
+        "footer";
+    }
+
+    @media (min-width: 300px){
+        .container{
+        height: 100vh;
+        width: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr 35px;
+        grid-template-areas:
+            "header"
+            "content"
+            "footer";
+            background: rgb(243, 243, 243);
+        }
+
+        .item1{
+            justify-self: end;
+        }
+
+        #logout {
+            background-color: transparent;
+        }
+
+        .btn {
+            border: none;
+            outline: none;
+            border-radius: 10px;
+        }
+
+        p {
+            font-size: 5vw;
+        }
+
+        .contentButtons {
+            margin: .5em;
+            min-height: 50vw;
+        }
+
+        button {
+            width: 7em;
+            padding: 1vw;
+            margin: .3vw;
+            cursor: pointer;
+            background-color: rgb(219, 219, 219);
+        }
+
+        button:active {
+            background: rgb(92, 76, 73);
+        }
+        
+        #selectedThemes {
+            width: 13em;
+            background-color: rgb(231, 117, 117);
+            color: rgb(253, 253, 243);
+        }
+    }
+
+    @media (min-width: 400px){
+        .container{
+        height: 100vw;
+        width: auto;
+        grid-template-areas:
+            "header"
+            "content"
+            "footer";
+        }
+
+        .contentButtons {
+            margin: .5em;
+            min-height: 20vw;
+        }
+
+        #selectedThemes {
+            width: 13em;
+            background-color: rgb(231, 117, 117);
+            color: rgb(253, 253, 243);
+        }
+
+    }
