@@ -1,24 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Routes from './Routes.js';
+import { AuthContextProvider } from './Components/AuthContext';
+import './Styles/App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-         HOLA COMPAÑEROS GEMINI, BIENVENIDOS A REACT
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AuthContextProvider>
+        <Routes/>
+      </AuthContextProvider>
     </div>
   );
 }
